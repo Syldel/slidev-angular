@@ -1,0 +1,36 @@
+.slidev-layout {
+  h1 {
+    display: inline-block;
+    padding: 0.25em;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: calc(100%);
+      height: calc(100%);
+      margin-left: -0.25em;
+      margin-top: -0.25em;
+      z-index: -1;
+      transform: rotate(-1deg);
+    }
+
+    code {
+      background: transparent !important;
+      font-size: inherit;
+      outline: 0 !important;
+    }
+  }
+}
+
+.slidev-layout{
+  h1 {
+    color: var(--slidev-theme-default-headingColor);
+
+    &::before {
+      background: var(--slidev-theme-default-headingBg);
+    }
+  }
+}
